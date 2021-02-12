@@ -70,6 +70,7 @@ def main_page():
 
 def main():
     db_session.global_init("db/helper_db.sqlite")  # создаем движок и подкление к бд
+    print('engine on')
     app.run(port=8000, host='127.0.0.1', debug=True)  # запуск приложения
 
 
