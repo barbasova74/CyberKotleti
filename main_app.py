@@ -71,7 +71,7 @@ def main_page():
 
 def main():
     db_session.global_init("db/helper_db.sqlite")  # создаем движок и подкление к бд
-    app.run(port=5050, debug=True)  # запуск приложения
+    app.run()  # запуск приложения
 
 
 if __name__ == '__main__':
