@@ -10,6 +10,7 @@ __factory = None
 
 def global_init(db_file):
     global __factory
+    print(__factory, 1)
 
     if __factory:
         return
@@ -29,4 +30,5 @@ def global_init(db_file):
 
 def create_session() -> Session:
     global __factory
+    print(__factory, 1)
     return __factory()
