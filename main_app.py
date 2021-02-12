@@ -14,6 +14,7 @@ import os
 app = Flask(__name__)  # приложение
 app.config['SECRET_KEY'] = 'our_project_secret_key'  # секретный ключ для csrf токена
 app.config['UPLOAD_FOLDER'] = 'static\img\\'  # папка куда будут загружаться картинки пользователей
+db_session.global_init("db/helper_db.sqlite")  # создаем движок и подкление к бд
 
 
 @app.route('/view_question/<int:qid>', methods=["GET", 'POST'])  # оработчик добавления работы
@@ -69,8 +70,6 @@ def main_page():
 
 
 def main():
-    db_session.global_init("db/helper_db.sqlite")  # создаем движок и подкление к бд
-    print('engine on')
     app.run(port=8000, host='127.0.0.1', debug=True)  # запуск приложения
 
 
