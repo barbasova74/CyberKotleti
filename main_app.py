@@ -68,11 +68,3 @@ def main_page():
     return render_template("questions_list.html", questions=questions, title="Main page")
 
 
-
-def main():
-    app.run(port=8000, host='127.0.0.1', debug=True)  # запуск приложения
-
-
-if __name__ == '__main__':
-    main()
-
