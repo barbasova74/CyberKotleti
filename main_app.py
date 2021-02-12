@@ -14,7 +14,6 @@ import os
 app = Flask(__name__)  # приложение
 app.config['SECRET_KEY'] = 'our_project_secret_key'  # секретный ключ для csrf токена
 app.config['UPLOAD_FOLDER'] = 'static\img\\'  # папка куда будут загружаться картинки пользователей
-api = Api(app)
 
 
 @app.route('/view_question/<int:qid>', methods=["GET", 'POST'])  # оработчик добавления работы
