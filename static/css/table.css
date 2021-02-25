@@ -1,7 +1,8 @@
 .my_table {
 	width: 100%;
     margin-bottom: 1rem;
-	text-align: center;
+	background: #E0F6FF;
+	border: 3px solid #0998FF;
 }
 th {
 	background: lightgray;
@@ -23,4 +24,27 @@ table td{
 }
 h2 {
 	text-align: center;
+}
+
+.question {	
+	width: 1216;
+	left: calc(50% - 1216px/2);
+	background: #E0F6FF;
+	border: 3px solid #0998FF;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 12px;
+}
+
+.descript {
+	margin-left: auto;
+	margin-right: auto;
+	top: calc(50% - 86px/2 - 490px);
+	background: #F2F7F9;
+	border-radius: 6px;
+	color: #597393;
+	text-align: center;
+	width: 1216px;
+	margin-top: 40px;
+
 }
