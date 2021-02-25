@@ -7,10 +7,10 @@ from wtforms.form import BaseForm
 
 
 class QuestionForm(FlaskForm):
-    header = StringField('Заголовок', validators=[DataRequired()])
-    description = TextAreaField('Описание', validators=[DataRequired()])
-    submit = SubmitField('Отправить')
+    header = StringField('', validators=[DataRequired()])
+    description = TextAreaField('', validators=[DataRequired()])
+    submit = SubmitField('Опубликовать')
 
 class AnswerForm(FlaskForm):
-    description = TextAreaField('Ответ', validators=[DataRequired()])
-    submit = SubmitField('Отправить')
+    description = TextAreaField('', validators=[DataRequired()])
+    submit = SubmitField('Опубликовать')
