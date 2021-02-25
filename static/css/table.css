@@ -28,7 +28,7 @@ h2 {
 
 .question {	
 	width: 1216;
-	
+	left: calc(50% - 1216px/2);
 	background: #E0F6FF;
 	border: 3px solid #0998FF;
 	margin-left: auto;
