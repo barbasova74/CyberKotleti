@@ -42,7 +42,7 @@ def add_question():
         return redirect('/')  # возвращение на главную страницу
     else:
         print(form.errors)  # если есть ошибки формы - показать
-    return render_template('add_question.html', title='Adding question',  # отправляем на сервер шаблон
+    return render_template('add_question.html', title='Добавление вопроса',  # отправляем на сервер шаблон
                            form=form)
 
 @app.route('/add_answer/<int:qid>', methods=["GET", 'POST'])  # оработчик добавления работы
@@ -58,7 +58,7 @@ def add_answer(qid):
         return redirect('/')  # возвращение на главную страницу
     else:
         print(form.errors)  # если есть ошибки формы - показать
-    return render_template('add_answer.html', title='Adding question',  # отправляем на сервер шаблон
+    return render_template('add_answer.html', title='Добавление ответа',  # отправляем на сервер шаблон
                            form=form)
 
 @app.route('/', methods=['GET', 'POST'])   # обработчик главной страницы
