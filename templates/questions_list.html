@@ -4,7 +4,7 @@
 <h2></h2>
 <link rel='stylesheet' type="text/css" href='/static/css/table.css' />
 <div class="descript">Наш сайт сделан, чтобы каждый смог задать вопрос на интересующую его тему из школьной программы и получить ответ. Здесь Вы можете как задавать вопросы, так и отвечать на них.</div>
-<p></p>
+<br />
 {% for question in questions %}
 	<button class="question">
 		<a href='/view_question/{{question.id}}' style="text-align: left;">
