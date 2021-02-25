@@ -1,3 +1,35 @@
 form {
 	width: 70%!important;
 }
+
+.cancel{
+	width: 170px;
+	height: 50px;
+	background: rgba(246, 149, 153, 0.3);
+	border: 2px solid #F64662;
+	box-sizing: border-box;
+	border-radius: 40px;
+	margin-left: 15px;
+	color: #000000; 
+	font-size: 20px;
+	text-align: center;
+}
+
+.publish {
+	background: #ADEC6D;
+	border: 2px solid #66C109;
+	box-sizing: border-box;
+	border-radius: 40px;
+	height: 50px;
+	width: 280px;
+	color: #000;
+	font-size: 20px;
+}
+
+.board {
+	width: 1228px;
+	background: rgba(50, 197, 255, 0.15);
+	border: 3px solid #0998FF;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
