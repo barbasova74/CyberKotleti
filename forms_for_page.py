@@ -8,7 +8,7 @@ from wtforms.form import BaseForm
 
 class QuestionForm(FlaskForm):
     header = StringField('', validators=[DataRequired()])
-    description = TextAreaField('', validators=[DataRequired()])
+    description = TextAreaField('Попросите оставить отвечающих контакты, если вы хотите с ними связаться', validators=[DataRequired()])
     submit = SubmitField('Опубликовать')
 
 class AnswerForm(FlaskForm):
