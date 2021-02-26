@@ -8,7 +8,7 @@ form {
 	background: rgba(246, 149, 153, 0.3);
 	border: 2px solid #F64662;
 	box-sizing: border-box;
-	border-radius: 40px;
+	border-radius: 20px;
 	margin-left: 15px;
 	color: #000000; 
 	font-size: 20px;
@@ -19,7 +19,7 @@ form {
 	background: #ADEC6D;
 	border: 2px solid #66C109;
 	box-sizing: border-box;
-	border-radius: 40px;
+	border-radius: 20px;
 	height: 50px;
 	width: 280px;
 	color: #000;
@@ -31,5 +31,6 @@ form {
 	background: rgba(50, 197, 255, 0.15);
 	border: 3px solid #0998FF;
 	box-sizing: border-box;
+	border-radious: 5px;
 	
 }
