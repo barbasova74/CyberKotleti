@@ -65,6 +65,6 @@ def add_answer(qid):
 def main_page():
     session = db_session.create_session()
     questions = session.query(Question)
-    return render_template("questions_list.html", questions=questions, title="Main page")
+    return render_template("questions_list.html", questions=questions, title="Главная страница")
 
 
