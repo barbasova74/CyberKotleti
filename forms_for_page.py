@@ -12,5 +12,5 @@ class QuestionForm(FlaskForm):
     submit = SubmitField('Опубликовать')
 
 class AnswerForm(FlaskForm):
-    description = TextAreaField('', validators=[DataRequired()])
+    description = TextAreaField('Оставьте ваши контакты, если вы хотите объяснить тему лично или более наглядно', validators=[DataRequired()])
     submit = SubmitField('Опубликовать')
