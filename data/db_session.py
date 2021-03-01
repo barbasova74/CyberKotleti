@@ -13,7 +13,7 @@ def global_init(db_file):
 
     if __factory:
         return
-
+    print(__factory)
     if not db_file or not db_file.strip():
         raise Exception("Необходимо указать файл базы данных.")
 
@@ -29,4 +29,5 @@ def global_init(db_file):
 
 def create_session() -> Session:
     global __factory
+    print(__factory)
     return __factory()

@@ -14,3 +14,8 @@ class QuestionForm(FlaskForm):
 class AnswerForm(FlaskForm):
     description = TextAreaField('Ответ', validators=[DataRequired()])
     submit = SubmitField('Отправить')
+
+class RegisterForm(FlaskForm):
+    login = StringField('Логин', validators=[DataRequired()])
+    password = StringField('Пароль', validators=[DataRequired()])
+    submit = SubmitField('Зарегистрироваться')
