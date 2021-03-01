@@ -1,0 +1,17 @@
+{% extends "main_template.html" %}
+
+{% block content %}
+<h2></h2>
+<link rel='stylesheet' type="text/css" href='/static/css/table.css' />
+<div class="descript">Наш сайт сделан, чтобы каждый смог задать вопрос на интересующую его тему из школьной программы или об устройстве школы и получить ответ. Также вы сможете найти тут человека, который понимает тему и сможет вам ее объяснить в удобном вам формате, например, с презентацией или видео. Здесь Вы можете как задавать вопросы, так и отвечать на них.</div>
+<br />
+{% for question in questions %}
+	<button class="question">
+		<a href='/view_question/{{question.id}}' style="text-align: left;">
+			<p class="author" style="color:black">аноним</p>
+			<h4 style="color:black">{{question.header}}</h4>
+			<p style="color:black">{{question.description}}</p>
+		</a>
+	</button>
+{% endfor %}
+{% endblock %}

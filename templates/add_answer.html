@@ -1,0 +1,20 @@
+{% extends "main_template.html" %}
+
+
+{% block content %}
+<h1>{{title}}</h1>
+<link rel='stylesheet' type="text/css" href='/static/css/style1.css' />
+<form action="" method="post">
+	{{form.csrf_token}}
+	<p>
+        {{ form.description.label }}<br>
+        {{ form.description(class="board", style="height: 300px;", placeholder="Введите ответ на вопрос. Если вы готовы помочь лично, то оставьте ваши контакты.") }}<br>
+		{% for error in form.description.errors %}
+		<p class="alert alert-danger" role="alert">
+			{{ error }}
+		</p>
+		{% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="publish") }} <button  class="cancel"><a href="/" style="color: black;">Отмена</a></button></p>
+</form>
+{% endblock %}

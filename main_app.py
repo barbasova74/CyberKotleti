@@ -60,7 +60,7 @@ def add_question():
         return redirect(f'/view_question/{question.id}')  # возвращение на страницу вопроса
     else:
         print(form.errors)  # если есть ошибки формы - показать
-    return render_template('add_question.html', title='Adding question',  # отправляем на сервер шаблон
+    return render_template('add_question.html', title='Добавление вопроса',  # отправляем на сервер шаблон
                            form=form)
 
 
@@ -77,7 +77,7 @@ def add_answer(qid):
         return redirect(f'/view_question/{qid}')  # возвращение на главную страницу
     else:
         print(form.errors)  # если есть ошибки формы - показать
-    return render_template('add_answer.html', title='Adding answer',  # отправляем на сервер шаблон
+    return render_template('add_answer.html', title='Добавление ответа',  # отправляем на сервер шаблон
                            form=form)
 
 
@@ -131,6 +131,3 @@ def abort_if_user_login_equal_to_new_user_login(user_login):
     user = session.query(User).filter(User.login == user_login).first()
     return user
 
-
-if __name__ == '__main__':
-    main()

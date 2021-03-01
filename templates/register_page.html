@@ -1,0 +1,32 @@
+{% extends "main_template.html" %}
+
+
+{% block content %}
+<h1>Registration</h1>
+<form method="post">
+    {{ form.csrf_token }}
+    <p>
+        {{ form.login.label }}<br>
+        {{ form.login(class="form-control", type="login") }}<br>
+        {% for error in form.login.errors %}
+		<p class="alert alert-danger" role="alert">
+			{{ error }}
+		</p>
+		{% endfor %}
+    </p>
+	{% if message %}
+	<p class="alert alert-danger" role="alert">{{ message }}</p>
+	{% endif %}
+    <p>
+        {{ form.password.label }}<br>
+        {{ form.password(class="form-control", type="password") }}<br>
+        {% for error in form.password.errors %}
+		<p class="alert alert-danger" role="alert">
+			{{ error }}
+		</p>
+		{% endfor %}
+    </p>
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+</form>
+{% endblock %}
