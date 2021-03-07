@@ -1,16 +1,12 @@
+from flask import Flask, render_template, redirect
+from flask_login import LoginManager, login_user, logout_user, login_required
+from flask_migrate import Migrate
+
+from data import db_session
 from forms_for_page import *
-from flask import Flask, render_template, redirect, request, url_for, send_from_directory
-from flask_restful import Api, abort
-from flask_login import LoginManager, login_user, logout_user, login_required, current_user
-from models.users import User
 from models.answers import Answer
 from models.questions import *
-from data import db_session
-
-from werkzeug.utils import secure_filename
-from requests import get, post, delete, put
-import requests
-import os
+from models.users import User
 
 app = Flask(__name__)  # приложение
 app.config['SECRET_KEY'] = 'our_project_secret_key'  # секретный ключ для csrf токена
@@ -18,6 +14,7 @@ app.config['UPLOAD_FOLDER'] = 'static\img\\'  # папка куда будут �
 db_session.global_init("db/helper_db.sqlite")  # создаем движок и подключение к бд
 login_manager = LoginManager()
 login_manager.init_app(app)
+migrate = Migrate(app, db_session)
 
 
 @login_manager.user_loader
@@ -131,3 +128,5 @@ def abort_if_user_login_equal_to_new_user_login(user_login):
     user = session.query(User).filter(User.login == user_login).first()
     return user
 
+
+main()
