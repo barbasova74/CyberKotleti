@@ -129,4 +129,5 @@ def abort_if_user_login_equal_to_new_user_login(user_login):
     return user
 
 
-main()
+if __name__ == '__main__':
+    main()
