@@ -1,7 +1,7 @@
 from flask import render_template, redirect
 from flask_login import login_user, logout_user, login_required
 
-from __init__ import db, app, login_manager
+from __init__ import app, login_manager
 from forms_for_page import *
 from models.answers import *
 from models.questions import *
@@ -122,5 +122,5 @@ def abort_if_user_login_equal_to_new_user_login(user_login):
     return user
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
