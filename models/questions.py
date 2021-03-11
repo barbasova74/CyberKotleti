@@ -1,9 +1,10 @@
-from data.db_session import SqlAlchemyBase
-from sqlalchemy import orm, String, Integer, ForeignKey, Column, DateTime
+from sqlalchemy import orm, String, Integer, Column
 from sqlalchemy_serializer import SerializerMixin
 
+from __init__ import db
 
-class Question(SqlAlchemyBase, SerializerMixin):
+
+class Question(db.Model, SerializerMixin):
     __tablename__ = 'questions'
 
     id = Column(Integer, primary_key=True, autoincrement=True)  # id
