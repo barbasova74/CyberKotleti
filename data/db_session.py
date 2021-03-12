@@ -23,8 +23,6 @@ def global_init(db_file):
     __factory = orm.sessionmaker(bind=engine)
 
 
-
-
 def create_session() -> Session:
     global __factory
     return __factory()
