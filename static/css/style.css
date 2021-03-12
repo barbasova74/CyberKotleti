@@ -12,6 +12,7 @@
   border: 2px solid #0998FF;
   box-sizing: border-box;
   border-radius: 20px;
+  padding: 7px;
 }
 
 .answer_board {
@@ -20,17 +21,19 @@
   width: 100%;
   background: rgba(50, 197, 255, 0.15);
   margin-top: 45px;
+  padding: 7px;
 }
 
 .add-ans {
 
   margin-top: 25px;
-  margin-left: 40%;
-  margin-right: 40%;
+  position: relative;
   height: 60px;
   width: 300px;
   background: #32C5FF;
   border: 2px solid #0998FF;
   box-sizing: border-box;
   border-radius: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
