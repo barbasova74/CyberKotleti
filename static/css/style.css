@@ -6,7 +6,7 @@
 .question_board {
   margin-left: auto;
   margin-right: auto;
-  width: 1216px;
+  width: 100%;
   background: rgba(50, 197, 255, 0.15);
   mix-blend-mode: normal;
   border: 2px solid #0998FF;
@@ -17,7 +17,7 @@
 .answer_board {
   margin-left: auto;
   margin-right: auto;
-  width: 1216px;
+  width: 100%;
   background: rgba(50, 197, 255, 0.15);
   margin-top: 45px;
 }
