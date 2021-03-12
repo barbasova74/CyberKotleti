@@ -16,7 +16,7 @@
     </p>
 	<p>
         <br>
-        {{ form.description(class="board", style="height: 300px;", placeholder="Введите ваш вопрос. Если вам нужна помощь лично, попросите оставить контакты") }}<br>
+        {{ form.description(class="board", style="height: 250px;", placeholder="Введите ваш вопрос. Если вам нужна помощь лично, попросите оставить контакты") }}<br>
 		{% for error in form.description.errors %}
 		<p class="alert alert-danger" role="alert">
 			{{ error }}
