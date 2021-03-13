@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -28,14 +29,7 @@
 <body>
 <header>
 	<nav class="navbar navbar-dark bg-dark">
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="
-		background: url(https://ibb.co/MyvBsgR);
-		border-radius: 50%;
-		width: 62px;
-		height: 62px;
-		">
-		</button>
+        <img src="https://i.ibb.co/7WscdWH/imgonline-com-ua-Resize-r-Y4d4-Oxr-Zmk.png", style="border-radius: 50%">
 		<a class="navbar-brand" href="/" style="
 			font-size: 18px;
 			color: #E7EBEF;
@@ -46,6 +40,10 @@
             <a class="btn btn-outline-warning header-btn" href="/logout">Выйти</a>
             {% else %}
             <p class="header-btn">
+                <a class="btn btn-primary" href="/add_question" style="
+			background: #DAE8F7;
+			color: #000000
+		">Задать свой вопрос</a>
                 <a class="btn btn-outline-primary " href="/register">Регистрация</a>
                 <a class="btn btn-outline-success" href="/login">Войти</a>
             </p>
@@ -53,14 +51,6 @@
         </div>
 
     </nav>
-    <a class="btn btn-primary" href="/add_question" style="
-			font-size: 20px;
-			background: #DAE8F7;
-			border-radius: 50px;
-			WIDTH: 20%;
-			margin-left: 80%;
-			color: #000000
-		">Задать свой вопрос</a>
 </header>
 <main role="main" class="container">
 	{% block content %}{% endblock %}
