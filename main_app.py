@@ -35,6 +35,15 @@ def view_question(qid):
                            form=form, answers=answers)
 
 
+@app.route('/delete_job/<int:id>')  # обработчик удаления работы
+@login_required
+def delete_job(id):
+    session = db.session()
+    session.delete(session.query(Question).get(id))  # DELETE запрос на удаление работы
+    session.commit()
+    return redirect('/')
+
+
 @app.route('/add_question', methods=["GET", 'POST'])  # оработчик добавления работы
 def add_question():
     session = db.session()
@@ -52,8 +61,6 @@ def add_question():
             question.categories.append(category)
         if current_user.is_authenticated:
             question.user = current_user
-        else:
-            question.author = 0
         session.add(question)
         session.commit()
         return redirect(f'/view_question/{question.id}')  # возвращение на страницу вопроса
