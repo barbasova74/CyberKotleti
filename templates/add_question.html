@@ -16,8 +16,8 @@
     </p>
     <p>
         {{ form.description.label }}<br>
-        {{ form.description(class="board", style="height: 300px;", placeholder="Введите ответ на вопрос. Если вы готовы
-        помочь лично, то оставьте ваши контакты.") }}<br>
+        {{ form.description(class="board", style="height: 300px;", placeholder="Введите ваш вопрос. Если вы хотите,
+        чтобы вам помогли лично, то попросите отвечающих оставить контакты или оставьте их сами.") }}<br>
         {% for error in form.description.errors %}
 		<p class="alert alert-danger" role="alert">
 			{{ error }}
