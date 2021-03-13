@@ -2,12 +2,13 @@
 
 
 {% block content %}
-<h1>Registration</h1>
+<link rel='stylesheet' type="text/css" href='/static/css/style.css' />
+<h1>Регистрация</h1>
 <form method="post">
     {{ form.csrf_token }}
     <p>
         {{ form.login.label }}<br>
-        {{ form.login(class="form-control", type="login") }}<br>
+        {{ form.login(class="form-control", style="background: rgba(50, 197, 255, 0.15); border: 2px solid #0998FF;", type="login") }}<br>
         {% for error in form.login.errors %}
 		<p class="alert alert-danger" role="alert">
 			{{ error }}
@@ -19,7 +20,7 @@
 	{% endif %}
     <p>
         {{ form.password.label }}<br>
-        {{ form.password(class="form-control", type="password") }}<br>
+        {{ form.password(class="form-control", style="background: rgba(50, 197, 255, 0.15); border: 2px solid #0998FF;", type="password") }}<br>
         {% for error in form.password.errors %}
 		<p class="alert alert-danger" role="alert">
 			{{ error }}
@@ -27,6 +28,6 @@
 		{% endfor %}
     </p>
     </p>
-    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    <p>{{ form.submit(type="submit", class="enter") }}</p>
 </form>
 {% endblock %}
