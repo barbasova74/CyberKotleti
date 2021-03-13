@@ -88,7 +88,7 @@ def login():
             login_user(user, remember=True)
             return redirect("/")
         return render_template('login_page.html',  # иначе тот же шаблон, с ошибкой
-                               message="Wrong login or password", title='Авторизация',
+                               message="Неправильный логин или пароль", title='Авторизация',
                                form=form)
     return render_template('login_page.html', title='Aвторизация', form=form)
 
