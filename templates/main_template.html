@@ -33,9 +33,11 @@
 		<a class="navbar-brand" href="/" style="
 			font-size: 18px;
 			color: #E7EBEF;
+			margin-right: auto;
+		        margin-left: 15px;
 		">Главная страница</a>
         <div class="navbar-nav">
-            <style type="text/css">.header-btn {margin: auto; margin-left: 700px;}</style>
+            <style type="text/css">.header-btn {margin: auto; margin-left: auto;}</style>
             {% if current_user.is_authenticated %}
             <a class="btn btn-outline-warning header-btn" href="/logout">Выйти</a>
             {% else %}
