@@ -6,23 +6,22 @@
 <form action="" method="post">
 	{{form.csrf_token}}
     <p>
-        <br>
-        {{ form.header(class="board", style="height: 100px;", placeholder="Введите тему вопроса") }}<br>
-		{% for error in form.header.errors %}
+        {{ form.description.label }}<br>
+        {{ form.description(class="board", style="height: 300px;", placeholder="Введите ответ на вопрос. Если вы готовы
+        помочь лично, то оставьте ваши контакты.") }}<br>
+        {% for error in form.description.errors %}
 		<p class="alert alert-danger" role="alert">
 			{{ error }}
 		</p>
 		{% endfor %}
     </p>
-	<p>
-        <br>
-        {{ form.description(class="board", style="height: 250px;", placeholder="Введите ваш вопрос. Если вам нужна помощь лично, попросите оставить контакты") }}<br>
-		{% for error in form.description.errors %}
-		<p class="alert alert-danger" role="alert">
-			{{ error }}
-		</p>
-		{% endfor %}
-    </p>
+    {% for subfield in form.select %}
+    <p>{{ subfield()}} {{ subfield.label}}</p>
+    {% endfor %}
     <p>{{ form.submit(type="submit", class="publish") }} <button  class="cancel"><a href="/" style="color: black;">Отмена</a></button></p>
 </form>
 {% endblock %}
+
+
+
+
