@@ -3,7 +3,6 @@ form {
 }
 
 .cancel{
-	width: 150px;
 	height: 40px;
 	background: rgba(246, 149, 153, 0.3);
 	border: 2px solid #F64662;
@@ -21,7 +20,6 @@ form {
 	box-sizing: border-box;
 	border-radius: 20px;
 	height: 40px;
-	width: 260px;
 	color: #000;
 	font-size: 20px;
 }
