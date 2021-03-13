@@ -6,6 +6,15 @@
 <form action="" method="post">
 	{{form.csrf_token}}
     <p>
+        <br>
+        {{ form.header(class="board", style="height: 100px;", placeholder="Введите тему вопроса") }}<br>
+        {% for error in form.header.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+    <p>
         {{ form.description.label }}<br>
         {{ form.description(class="board", style="height: 300px;", placeholder="Введите ответ на вопрос. Если вы готовы
         помочь лично, то оставьте ваши контакты.") }}<br>
