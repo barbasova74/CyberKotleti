@@ -11,3 +11,6 @@ class Question(db.Model, SerializerMixin):
     header = Column(String, nullable=False)  # заголовок
     description = Column(String, nullable=False)  # описание
     answer = orm.relation("Answer")  # связь с таблицой answers
+    categories = orm.relation("Category",  # ассоциативная связь с таблицой category
+                              secondary="association",
+                              backref="questions")

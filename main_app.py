@@ -4,6 +4,7 @@ from flask_login import login_user, logout_user, login_required
 from __init__ import app, login_manager
 from forms_for_page import *
 from models.answers import *
+from models.categories import *
 from models.questions import *
 from models.users import *
 
@@ -36,13 +37,19 @@ def view_question(qid):
 
 @app.route('/add_question', methods=["GET", 'POST'])  # оработчик добавления работы
 def add_question():
+    session = db.session()
     form = QuestionForm()  # форма
+    choices = [(category.id - 1, category.name) for category in
+               session.query(Category)]  # список кортежей: (значение, заголовок)
+    form.select.choices = choices
     if form.validate_on_submit():  # если валидация прошла успешно(нет ошибок заполнения формы)
-        session = db.session()
+
         question = Question()
         question.header = form.header.data
         question.description = form.description.data
-        print(question.id)
+        for category_name in [form.select.choices[val][1] for val in form.select.data]:
+            category = session.query(Category).filter(Category.name == category_name).first()
+            question.categories.append(category)
         session.add(question)
         session.commit()
         return redirect(f'/view_question/{question.id}')  # возвращение на страницу вопроса
