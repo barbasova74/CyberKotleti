@@ -8,7 +8,11 @@
 {% for question in questions %}
 	<button class="question">
 		<a href='/view_question/{{question.id}}' style="text-align: left;">
+			{% if question.user.id %}
+			<p class="author" style="color:blue">{{question.user.login}}</p>
+			{% else %}
 			<p class="author" style="color:black">аноним</p>
+			{% endif %}
 			<h4 style="color:black">{{question.header}}</h4>
 			<p style="color:black">{{question.description}}</p>
 		</a>

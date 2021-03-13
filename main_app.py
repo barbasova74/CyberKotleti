@@ -1,5 +1,5 @@
 from flask import render_template, redirect
-from flask_login import login_user, logout_user, login_required
+from flask_login import login_user, logout_user, login_required, current_user
 
 from __init__ import app, login_manager
 from forms_for_page import *
@@ -50,6 +50,10 @@ def add_question():
         for category_name in [form.select.choices[val][1] for val in form.select.data]:
             category = session.query(Category).filter(Category.name == category_name).first()
             question.categories.append(category)
+        if current_user.is_authenticated:
+            question.user = current_user
+        else:
+            question.author = 0
         session.add(question)
         session.commit()
         return redirect(f'/view_question/{question.id}')  # возвращение на страницу вопроса
