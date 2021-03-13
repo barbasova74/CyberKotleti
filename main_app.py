@@ -88,9 +88,9 @@ def login():
             login_user(user, remember=True)
             return redirect("/")
         return render_template('login_page.html',  # иначе тот же шаблон, с ошибкой
-                               message="Wrong login or password", title='Authorization',
+                               message="Wrong login or password", title='Авторизация',
                                form=form)
-    return render_template('login_page.html', title='Authorization', form=form)
+    return render_template('login_page.html', title='Aвторизация', form=form)
 
 
 @app.route('/register', methods=['GET', 'POST'])  # обработчик регистрации
@@ -99,8 +99,8 @@ def reqister():
     if form.validate_on_submit():  # При успешной валидации отправляем данные и регистрируем пользователя
         session = db.session()
         if abort_if_user_login_equal_to_new_user_login(form.login.data):
-            return render_template('register_page.html', title='Registration', form=form,
-                                   message='Этот логин уже используется, придумацйте другой')
+            return render_template('register_page.html', title='Регистрация', form=form,
+                                   message='Этот логин уже используется, придумайте другой')
         else:
             user = User()
             user.login = form.login.data
@@ -109,7 +109,7 @@ def reqister():
             session.commit()
             return redirect('/')
 
-    return render_template('register_page.html', title='Registration', form=form)
+    return render_template('register_page.html', title='Регистрация', form=form)
 
 
 @app.route('/', methods=['GET', 'POST'])  # обработчик главной страницы
