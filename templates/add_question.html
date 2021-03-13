@@ -27,8 +27,8 @@
     {% for subfield in form.select %}
     <p>{{ subfield()}} {{ subfield.label}}</p>
     {% endfor %}
-    <p>{{ form.submit(type="submit", class="publish") }} <a href="/" style="color: black;"><input class="cancel"
-                                                                                                  value='Отмена'></input></a>
+    <p>{{ form.submit(type="submit", class="publish") }}
+        <a href="/" style="color: black;"><input class="cancel" value='Отмена'></input></a>
     </p>
 </form>
 {% endblock %}

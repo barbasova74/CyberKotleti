@@ -15,6 +15,8 @@
 		</p>
 		{% endfor %}
     </p>
-    <p>{{ form.submit(type="submit", class="publish") }} <button  class="cancel"><a href="/" style="color: black;">Отмена</a></button></p>
+	<p>{{ form.submit(type="submit", class="publish") }}
+		<a href="/" style="color: black;"><input class="cancel" value='Отмена'></input></a>
+	</p>
 </form>
 {% endblock %}
