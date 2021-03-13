@@ -42,5 +42,7 @@
 	background: #32C5FF;
 	border: 2px solid #0998FF;
 	border-radius: 20px;
-  font-size: 16px;
+        font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
 }
