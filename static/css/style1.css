@@ -4,7 +4,7 @@ form {
 
 .cancel{
 	width: 150px;
-	height: 50px;
+	height: 40px;
 	background: rgba(246, 149, 153, 0.3);
 	border: 2px solid #F64662;
 	box-sizing: border-box;
@@ -20,7 +20,7 @@ form {
 	border: 2px solid #66C109;
 	box-sizing: border-box;
 	border-radius: 20px;
-	height: 50px;
+	height: 40px;
 	width: 260px;
 	color: #000;
 	font-size: 20px;
