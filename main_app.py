@@ -36,6 +36,7 @@ def view_question(qid):
 
 
 @app.route('/delete_question/<int:id>')  # обработчик удаления вопроса
+@login_required
 def delete_question(id):
     session = db.session()
     session.delete(session.query(Question).get(id))  # DELETE запрос на удаление работы
