@@ -35,9 +35,8 @@ def view_question(qid):
                            form=form, answers=answers)
 
 
-@app.route('/delete_job/<int:id>')  # обработчик удаления работы
-@login_required
-def delete_job(id):
+@app.route('/delete_question/<int:id>')  # обработчик удаления вопроса
+def delete_question(id):
     session = db.session()
     session.delete(session.query(Question).get(id))  # DELETE запрос на удаление работы
     session.commit()
